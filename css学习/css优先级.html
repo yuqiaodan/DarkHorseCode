@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* body {
+            color: red;
+        }
+
+        div {
+            color: green;
+        }
+
+        .box {
+            color: blue;
+        }
+
+        #box {
+          
+            color: orange !important;
+        }
+ */
+
+
+
+
+        /* (行内，id,类，标签) */
+
+        /* （0，1，0，1） 橙色优先级*/
+        div #one {
+            color: orange;
+        }
+
+        /* （0，1，0，1）粉色优先级 */
+        #box p {
+            color: pink;
+        }
+
+        /* （0，0，2，0） */
+        .father .son {
+            color: skyblue;
+        }
+
+        /* （0，0，1，1） */
+        .father p {
+            color: purple;
+        }
+
+        /* （0，0，0，2） */
+        div p {
+            color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="box" id="box" style="color: pink;">测试优先级</div> -->
+
+    <div class="father" id="box">
+        <p class="son" id="one"> 我是一个P标签</p>
+    </div>
+
+
+</body>
+
+</html>
